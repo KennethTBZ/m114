@@ -66,6 +66,7 @@ ISO-8859-Codierung und UTF-8-Codierung ist effizienter, weil UTF16 immer 2Byte b
  Gewählter Font-Satz wie z.B. Arial enthält Violinzeichen nicht.
 
 
+# Alphanumerische codes
 ## 1.Wie lautet der ANSI-ASCII-Code für das Eurozeichen €? 
 0x80 oder 1000’0000
 ## 2.Wie lautet der Unicode für das Eurozeichen €? 
@@ -88,3 +89,4 @@ HEX: AC 20 55 00 52 00 4F 00
 ANSI-ASCII und UTF-8 sind sehr ähnlich, aussert beim Eurozeichen.
 Bei BE-16 und LE-16 unterscheiden sich bei FE-FF und pro 16-Bit-Charakter die 
 Byte-Order.
+
