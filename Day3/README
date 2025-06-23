@@ -1,0 +1,26 @@
+# Mehr Speicherersparnis?
+Beides spart gleich viel Speicher (3840 Byte/Zeile). Die HD720-Version ist qualitativ besser, da die Farbinformationen erhalten bleiben.
+
+# Spart RGB -> YCbCr Umwandlung Speicher?
+Nein. Erst das anschliessende Chroma-Subsampling spart Speicher.
+
+# Speichereinsparung durch Subsampling?
+- 4:4:4: 0%
+- 4:2:2: 33.3%
+- 4:1:1: 50%
+- 4:2:0: 50%
+
+# Warum verschlechtert sich die Bildschärfe bei 4:1:1 nicht?
+    Weil der für die Schärfe entscheidende Luminanzkanal (Y) mit voller Auflösung (100%) erhalten bleibt. Nur die Farbinformation wird reduziert.
+
+# Warum entstehen Block-Artefakte bei starker JPG-Kompression?
+    Der Algorithmus teilt das Bild in 8x8-Pixel-Blöcke auf und komprimiert diese einzeln. Bei starker Komprimierung werden die Grenzen zwischen diesen Blöcken sichtbar.
+
+# Was ist GOP25?
+Eine "Group of Pictures" mit einer Länge von 25 Frames, wobei jedes 25. Bild ein vollständiges Schlüsselbild (I-Frame) ist.
+
+# Welche Szene hat mehr Sparpotenzial (Interframe)?
+    Szene A (Kirchturm). Der statische Bildinhalt führt zu minimalen Differenzbildern und damit zu maximaler Kompression.
+
+# Wie sieht das erste Differenzbild aus?
+    Es speichert nur die Änderungen: Die neue Position des Punktes wird hinzugefügt (rot), die alte Position wird entfernt (schwarz).

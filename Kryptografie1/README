@@ -1,0 +1,71 @@
+# Kryptografie Teil 1
+
+#### HAL 9000
+
+**Lösung**: IBM
+Die Buchstaben sind jeweils um eine Stelle im Alphabet verschoben (Rotations-Chiffre).
+
+---
+
+#### Cäsars Rotationschiffre
+
+**Schlüssel**: 3 (ROT-3)
+
+**Klartexte**:
+
+* DER ANGRIFF ERFOLGT ZUR TEEZEIT
+* DIE WUERFEL SIND GEFALLEN
+* ICH KAM SAH UND SIEGTE
+* TEILE UND HERRSCHE
+
+---
+
+#### Vigenère-Chiffre
+
+**Beispiele**:
+
+* `BEEF` (Schlüssel: AFFE) → `BJJJ`
+* `WRKXQT` (Schlüssel: SECRET) → `ENIGMA`
+
+**Klartext entschlüsselt**:
+
+* DER STAAT BIN ICH (u.a. Zitate von Ludwig XIV)
+
+**Feststellung**:
+
+* Kurzer Schlüssel (z.B. B): Erzeugt sichtbare Muster.
+* Längerer Schlüssel (z.B. BC): Führt zu komplexeren, schwerer analysierbaren Mustern.
+
+---
+
+#### XOR-Stromchiffre
+
+**Frage**: 4711 XOR mit 10001101
+**Lösung**: `1001 1111 1110 1010`
+
+---
+
+#### Symmetrische Verfahren
+
+**Warum "symmetrisch"?**
+Gleicher Schlüssel für Ver- und Entschlüsselung.
+
+**Vorteil**: Sehr schnell
+**Nachteil**: Schlüsselverteilung ist ein Problem; Anzahl der Schlüssel wächst quadratisch.
+
+---
+
+#### Schlüsselanzahl (Excel-Aufgabe)
+
+**Formel**: `Anzahl = N * (N - 1) / 2`
+
+| Personenanzahl | Schlüsselanzahl |
+| -------------- | --------------- |
+| 10             | 45              |
+| 20             | 190             |
+| 50             | 1'225           |
+| 100            | 4'950           |
+| 1000           | 499'500         |
+
+**Interpretation**:
+Die Anzahl wächst **quadratisch**, nicht linear. Schlüsselmanagement ist daher **nicht skalierbar**.
